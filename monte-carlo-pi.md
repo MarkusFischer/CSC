@@ -1,11 +1,12 @@
 ---
 layout: page
-title: "Pi mit Hilfe eines Zufallsexperiments bestimmen"
+title: "Pi mit Hilfe des Zufalls bestimmen"
 peramlink: /monte-carlo-pi
 ---
 
 Bekanntlich beträgt der Flächeninhalt eines Kreises mit Radius $r$ $A_K = \pi r^2$.
 Wir betrachten nun einen Inkreis eines Quadrates, also den Kreis der im Inneren eines Quadrates liegt und das Quadrat genau in den Mittelpunkten der Kanten berührt. Dargestellt ist diese Situation in der folgenden Abbildung: 
+
 ![](/img/monte-carlo-pi/empty.png){:.centered} 
 
 Dieses Quadrat hat nun eine Kantenlänge von $l=2r$ und damit einen Flächeninhalt von $A_Q=4r^2$.
@@ -28,5 +29,10 @@ Schaut man sich den Betrag des Fehlers an, sieht man, dass mit dieser Methode ab
 
 ![](/img/monte-carlo-pi/pi_error.png){:.centered}
 
-Sehr viel besser wird das Ergebnis aber leider nicht. Denn selbst bei $10000000$ Punkten, wird $\pi$ nur auf etwa 3 Nachkommastellen genau berechnet. Das zeigt auch sehr schön den Nachteil dieser Methode in der Praxis. Für eine beliebig genaue Approximation von $\pi$ sind so viele Punkte notwendig, dass es nicht mehr praktikabel umsetzbar ist. Dafür ist dieses Vorgehen sehr anschaulich und gut verständlich im Vergleich zu den effizienteren aber auch komplizierteren Methoden.
+Sehr viel besser wird das Ergebnis aber leider nicht. Denn selbst bei $10000000$ Punkten, wird $\pi$ nur auf etwa 3 Nachkommastellen genau berechnet. Das zeigt auch sehr schön den Nachteil dieser Methode in der Praxis. Für eine beliebig genaue Approximation von $\pi$ sind so viele Punkte notwendig, dass es nicht mehr praktikabel umsetzbar ist. Denn für $k$ Nachkommastellen sind mindestens $10^k$ Punkte notwendig, in der Realität aber mehr, denn wir haben ja noch den Zufall mit im Spiel. Dafür ist dieses Vorgehen sehr anschaulich und gut verständlich im Vergleich zu den effizienteren aber auch komplizierteren Methoden.
 Allerdings findet diese Methode, die übrigens Monte-Carlo-Methode genannt wird, in vielen anderen Bereichen der Statistik und darüber hinaus seine Anwendung.
+
+#### Literatur
+
+- Christopher M. Bishop: Pattern Recognition and Machine Learning, Springer, 2006, ISBN 978-0-387-31073-2 
+
